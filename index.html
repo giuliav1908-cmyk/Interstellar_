@@ -1,0 +1,175 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interstellar - Pianeti e Scienza</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b0d17;
+            color: #e0e6ed;
+            line-height: 1.6;
+        }
+        nav {
+            background-color: rgba(11, 13, 23, 0.9);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            border-bottom: 1px solid #1f293d;
+            z-index: 1000;
+        }
+        nav .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #7000ff;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover, nav a.active {
+            color: #00f2fe;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Titolo Colorato con Sfumatura */
+        h1.title-gradient {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #7000ff, #00f2fe, #38ef7d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(112, 0, 255, 0.3);
+        }
+
+        .planet-section {
+            background-color: #161b26;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #2a3447;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        @media(min-width: 768px) {
+            .planet-section {
+                flex-direction: row;
+                align-items: center;
+            }
+            .planet-section.reverse {
+                flex-direction: row-reverse;
+            }
+        }
+
+        .planet-img {
+            width: 100%;
+            max-width: 350px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .planet-content h2 {
+            color: #00f2fe;
+            margin-bottom: 0.5rem;
+        }
+
+        .planet-content p {
+            color: #c3cedd;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(112, 0, 255, 0.2);
+            color: #00f2fe;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 0.8rem;
+            border: 1px solid rgba(0, 242, 254, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #6c7a89;
+            border-top: 1px solid #1f293d;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">INTERSTELLAR</div>
+        <ul>
+            <li><a href="index.html">Trama</a></li>
+            <li><a href="cast.html">Cast & Personaggi</a></li>
+            <li><a href="pianeti.html" class="active">Pianeti & Scienza</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Titolo Colorato -->
+        <h1 class="title-gradient">Mondi Esplorati & Scienza</h1>
+
+        <!-- Pianeta 1 -->
+        <div class="planet-section">
+            <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80" alt="Pianeta di Miller" class="planet-img">
+            <div class="planet-content">
+                <h2>Il Pianeta di Miller</h2>
+                <span class="badge">Dilatazione Temporale: 1 Ora = 7 Anni terrestri</span>
+                <p>Un pianeta interamente ricoperto da un oceano poco profondo, spazzato da onde giganti alte centinaia di metri causate dall'enorme forza gravitazionale del buco nero Gargantua.</p>
+            </div>
+        </div>
+
+        <!-- Pianeta 2 -->
+        <div class="planet-section reverse">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Pianeta di Mann" class="planet-img">
+            <div class="planet-content">
+                <h2>Il Pianeta di Mann</h2>
+                <span class="badge">Ambiente Inospitale</span>
+                <p>Un mondo gelato e privo di superficie solida, ricoperto di ghiaccio ed elementi tossici. Ospita il dr. Mann, uno dei primi esploratori inviati con la missione Lazarus.</p>
+            </div>
+        </div>
+
+        <!-- Gargantua -->
+        <div class="planet-section">
+            <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=600&q=80" alt="Gargantua" class="planet-img">
+            <div class="planet-content">
+                <h2>Gargantua (Buco Nero)</h2>
+                <span class="badge">Singolarità Gravitazionale</span>
+                <p>Un imponente buco nero supermassiccio ruotante, circondato da un brillante disco di accrescimento. È il cuore attorno a cui orbitano i vari pianeti del sistema.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Progetto Fan Page Interstellar - Pagina 3: Pianeti</p>
+    </footer>
+
+</body>
+</html>
